@@ -5,7 +5,7 @@ namespace App\Fram\BaseClasses;
 use App\Fram\Interfaces\ConnectionInterface;
 use Psr\Container\ContainerInterface;
 
-class BaseManager
+abstract class BaseManager
 {
     protected \PDO $pdo;
 

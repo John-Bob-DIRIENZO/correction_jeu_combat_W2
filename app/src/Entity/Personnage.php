@@ -14,11 +14,10 @@ abstract class Personnage extends BaseEntity
     protected \DateTime $sleep;
 
     const IS_SLEEPING = 1;
-    const IS_AWAKE = 2;
-    const NO_MANA = 3;
-    const ITS_ME = 4;
-    const NO_DEGATS = 5;
-    const DEAD = 6;
+    const NO_MANA = 2;
+    const ITS_ME = 3;
+    const NO_DEGATS = 4;
+    const DEAD = 5;
 
     public function __construct(array $data = [])
     {
@@ -62,6 +61,18 @@ abstract class Personnage extends BaseEntity
         return true;
     }
 
+    public function getPrettyClass()
+    {
+        $reflection = new \ReflectionClass($this);
+        return $reflection->getShortName();
+    }
+
+    public function isSleeping():bool
+    {
+        return $this->sleep > new \DateTime('-1 minute');
+    }
+
+    // Getters & Setters
     public function getId()
     {
         return $this->id;
@@ -126,16 +137,5 @@ abstract class Personnage extends BaseEntity
     {
         $this->nom = $nom;
         return $this;
-    }
-
-    public function getPrettyClass()
-    {
-        $reflection = new \ReflectionClass($this);
-        return $reflection->getShortName();
-    }
-
-    public function isSleeping():bool
-    {
-        return $this->sleep > new \DateTime('-1 minute');
     }
 }

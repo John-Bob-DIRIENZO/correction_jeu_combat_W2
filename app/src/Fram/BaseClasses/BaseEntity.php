@@ -4,7 +4,7 @@ namespace App\Fram\BaseClasses;
 
 use App\Fram\Utils\Hydrator;
 
-class BaseEntity
+abstract class BaseEntity
 {
     use Hydrator;
 
