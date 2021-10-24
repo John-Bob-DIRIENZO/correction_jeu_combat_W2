@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+    <route path="/" controller="PostController" action="index"/>
+    <route path="add" controller="PostController" action="add" params="nom,className"/>
+    <route path="play" controller="PostController" action="play" params="id" />
+    <route path="attack" controller="PostController" action="attack" params="id,cible" />
+    <route path="spell" controller="PostController" action="spell" params="id,cible" />
+    <!-- /api/ -->
+    <route path="upload-image" controller="ApiController" action="uploadImage"/>
+</routes>

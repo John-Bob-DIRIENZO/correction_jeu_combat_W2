@@ -1,0 +1,23 @@
+{
+  "name": "jean-francois/app",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "John-Bob-DIRIENZO",
+      "email": "jf.dirienzo@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-pdo": "*",
+    "ext-dom": "*",
+    "ext-json": "*",
+    "ext-exif": "*",
+    "cocur/slugify": "^4.0",
+    "ext-fileinfo": "*",
+    "psr/container": "^2.0"
+  }
+}
